@@ -1,0 +1,133 @@
+//colors
+$black: black;
+$white: white;
+$color_flame: #d25c33;
+$color_olive: #617924;
+$color_tomato: tomato;
+$color_lightblue: #53bcf8;
+//fonts
+$font_0: Raleway;
+$font_1: sans-serif;
+$font_2: georgia;
+$font_3: serif;
+//urls
+$url_0: url(img/b1.jpg);
+$url_1: url(img/background-image.jpg);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid $black;
+    font-family: $font_0, $font_1;
+    background-color: $white;
+    font-size: 12px;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 2px solid $black;
+    text-align: center;
+    font: italic bold 30px $font_2, $font_3;
+    color: $white;
+    background-image: $url_0;
+}
+
+form {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+input {
+    background: $color_flame;
+    box-shadow: inset 1px 1px 1px $black;
+    color: $white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+#searchbutton {
+    background: $black;
+    color: $white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flex-container {
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: $color_flame;
+}
+
+main {
+    div {
+        flex-basis: 33%;
+        align-self: center;
+    }
+    img {
+        object-fit: contain;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+#modalImg {
+    height: 600px;
+    width: 750px;
+}
+
+.modalButton {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+    color: $white;
+    background-color: $color_olive;
+    font-size: 14px;
+    padding: 8px;
+    &:hover {
+        background-color: $color_tomato;
+        border-color: $color_lightblue;
+        color: $white;
+    }
+}
+
+footer {
+    margin-top: 5px;
+    border-top: 0;
+    padding: 20px;
+    text-align: center;
+    background-image: $url_1;
+}
+
+@media(max-width: 992px) {
+    #modalImg {
+        height: 400px;
+        width: 450px;
+    }
+}
+
+@media(max-width: 768px) {
+    main div {
+        flex-basis: 50%;
+        align-self: center;
+    }
+}
+
+@media(max-width: 576px) {
+    #modalImg {
+        height: 350px;
+        width: 400px;
+    }
+    main div {
+        flex-basis: 100%;
+        align-self: center;
+    }
+}

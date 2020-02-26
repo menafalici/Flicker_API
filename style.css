@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid black;
+  font-family: Raleway, sans-serif;
+  background-color: white;
+  font-size: 12px;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font: italic bold 30px georgia, serif;
+  color: white;
+  background-image: url(img/b1.jpg);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+input {
+  background: #d25c33;
+  -webkit-box-shadow: inset 1px 1px 1px black;
+          box-shadow: inset 1px 1px 1px black;
+  color: white;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+#searchbutton {
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flex-container {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #d25c33;
+}
+
+main div {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#modalImg {
+  height: 600px;
+  width: 750px;
+}
+
+.modalButton {
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: white;
+  background-color: #617924;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.modalButton:hover {
+  background-color: tomato;
+  border-color: #53bcf8;
+  color: white;
+}
+
+footer {
+  margin-top: 5px;
+  border-top: 0;
+  padding: 20px;
+  text-align: center;
+  background-image: url(img/background-image.jpg);
+}
+
+@media (max-width: 992px) {
+  #modalImg {
+    height: 400px;
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  main div {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #modalImg {
+    height: 350px;
+    width: 400px;
+  }
+  main div {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
